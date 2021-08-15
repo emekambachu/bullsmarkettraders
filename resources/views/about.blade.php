@@ -69,7 +69,7 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="pills-support">
-                                <p>Digital Trading Options was founded on the principle of delivering superior long and short term returns at the lowest possible risk. DMI believes that having a world-class investor base of like-minded, high-quality organizations is key to investment success.</p>
+                                <p>Bulls Market Traders was founded on the principle of delivering superior long and short term returns at the lowest possible risk. DMI believes that having a world-class investor base of like-minded, high-quality organizations is key to investment success.</p>
                             </div>
                             <div class="tab-pane fade" id="pills-comunication">
                                 <p>Offering comprehensive and flexible assets to investors within the Cryptocurrency market, with low friction, transparency and reliability and with highest possible return on investment.</p>

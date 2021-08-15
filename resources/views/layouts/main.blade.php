@@ -107,7 +107,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="{{ url('services') }}">About</a>
+                            <a href="{{ url('services') }}">Services</a>
                         </li>
                         <li>
                             <a href="{{ url('contact') }}">Contact</a>
