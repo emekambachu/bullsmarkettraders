@@ -554,7 +554,7 @@ Home
                             <div class="single-client-wrap">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="{{ asset('partners/cl-logo1.png') }}" alt="img">
+                                        <img src="{{ asset('images/partners/cl-logo1.png') }}" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -563,7 +563,7 @@ Home
                             <div class="single-client-wrap">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="{{ asset('partners/cl-logo2.png') }}" alt="img">
+                                        <img src="{{ asset('images/partners/cl-logo2.png') }}" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -572,7 +572,7 @@ Home
                             <div class="single-client-wrap">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="{{ asset('partners/cl-logo3.png') }}" alt="img">
+                                        <img src="{{ asset('images/partners/cl-logo3.png') }}" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -581,7 +581,7 @@ Home
                             <div class="single-client-wrap">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="{{ asset('partners/cl-logo4.png') }}" alt="img">
+                                        <img src="{{ asset('images/partners/cl-logo4.png') }}" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -590,7 +590,7 @@ Home
                             <div class="single-client-wrap">
                                 <div class="thumb">
                                     <a href="#">
-                                        <img src="{{ asset('partners/cl-logo5.png') }}" alt="img">
+                                        <img src="{{ asset('images/partners/cl-logo5.png') }}" alt="img">
                                     </a>
                                 </div>
                             </div>
@@ -678,7 +678,7 @@ Home
                         <div class="item">
                             <div class="testimonial-wrap-2">
                                 <div class="thumb">
-                                    <img src="{{ asset('testimonial/aljazeera.png') }}" alt="img">
+                                    <img src="{{ asset('images/testimonial/aljazeera.png') }}" alt="img">
                                     <span><i class="fa fa-quote-right"></i></span>
                                 </div>
                                 <div class="testimonial-wrap-details">
@@ -698,7 +698,7 @@ Home
                         <div class="item">
                             <div class="testimonial-wrap-2">
                                 <div class="thumb">
-                                    <img src="{{ asset('testimonial/cnbc.png') }}" alt="img">
+                                    <img src="{{ asset('images/testimonial/cnbc.png') }}" alt="img">
                                     <span><i class="fa fa-quote-right"></i></span>
                                 </div>
                                 <div class="testimonial-wrap-details">

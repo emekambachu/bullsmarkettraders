@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('main/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('main/css/responsive.css') }}">
 
+    @yield('top-assets')
+
 </head>
 
 <body>
@@ -103,7 +105,7 @@
                                 <li><a href="{{ url('about') }}">About us</a></li>
                                 <li><a href="{{ url('terms') }}">Terms and Conditions</a></li>
                                 <li><a href="{{ url('legal') }}">Legal</a></li>
-                                <li><a href="{{ url('faq') }}">FAQ</a></li>
+{{--                                <li><a href="{{ url('faq') }}">FAQ</a></li>--}}
                             </ul>
                         </li>
                         <li>
@@ -111,6 +113,12 @@
                         </li>
                         <li>
                             <a href="{{ url('contact') }}">Contact</a>
+                        </li>
+                        <li>
+                            <a style="color: #DD1C63;" href="{{ route('register') }}">Sign up</a>
+                        </li>
+                        <li>
+                            <a style="color: #DD1C63;" href="{{ route('login') }}">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -123,7 +131,6 @@
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                             </ul>
                         </li>
-                        <li><a class="search header-search" href="#"><i class="fa fa-search"></i></a></li>
                     </ul>
                 </div>
             </div>
@@ -244,6 +251,9 @@
 <script src="{{ asset('main/js/vendor.js') }}"></script>
 <!-- main js  -->
 <script src="{{ asset('main/js/main.js') }}"></script>
+
+@yield('bottom-assets')
+
 </body>
 
 </html>
