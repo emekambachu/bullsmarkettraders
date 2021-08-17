@@ -1,5 +1,5 @@
 
-<img src="{{ asset('cryptolabsfx_logo.png') }}" width="100">
+<img src="{{ asset('bullsmarket_logo.png') }}" width="100">
 
 <h3>Hello {{ $name }}</h3>
 
@@ -12,4 +12,4 @@
 </p>
 
 <p align="center">Need more information?<br>
-    Please contact <strong>support@wglobalinvestment.com</strong>.</p>
+    Please contact <strong>info@bullsmarkettraders.com</strong>.</p>
