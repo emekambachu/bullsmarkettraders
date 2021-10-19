@@ -136,6 +136,11 @@
             </div>
         </div>
     </nav>
+    <script type="text/javascript"
+            src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script>
+    <div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,2010,52" currency="USD"
+         theme="dark" transparent="false" show-symbol-logo="true">
+    </div>
 </div>
 <!-- navbar end -->
 
