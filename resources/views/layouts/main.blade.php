@@ -44,20 +44,12 @@
 </div>
 <!-- //. search Popup -->
 
-
 <!-- topbar area start -->
 <div class="topbar-area topbar-area-2">
     <div class="container">
         <div class="row">
             <div class="col-sm-2 align-self-center">
-                <div class="lang-select">
-                    <img src="{{ asset('main/img/icon/en.png') }}" alt="img">
-                    <select>
-                        <option>ENG</option>
-                        <option value="1">BN</option>
-                        <option value="2">RUS</option>
-                    </select>
-                </div>
+                <div id="google_translate_element"></div>
             </div>
             <div class="col-md-7 col-sm-10 align-self-center">
                 <div class="topbar-content text-lg-right">
@@ -265,7 +257,7 @@
     (function(){
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
-        s1.src='https://embed.tawk.to/616d67d9f7c0440a591ec6cf/1fi9lraor';
+        s1.src='https://embed.tawk.to/6171c26d86aee40a5737c2a5/1fii5uv4d';
         s1.charset='UTF-8';
         s1.setAttribute('crossorigin','*');
         s0.parentNode.insertBefore(s1,s0);
@@ -273,6 +265,12 @@
 </script>
 <!--End of Tawk.to Script-->
 
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 
 </html>
