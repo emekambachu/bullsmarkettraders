@@ -46,11 +46,12 @@ class InvestmentPackageController extends Controller
             'name' => 'required|min:5|string|unique:investment_packages,name',
             'min' => 'required|numeric',
             'max' => 'required|numeric',
-            'referral_bonus' => 'required|numeric',
-            'monthly_profit' => 'required|numeric',
-            'days_turnover' => 'required|numeric',
-            'expert_advice' => 'required|string',
-            'deposit_bonus' => 'required|numeric',
+            'referral_bonus' => 'nullable|numeric',
+            'monthly_profit' => 'nullable|numeric',
+            'roi' => 'nullable',
+            'days_turnover' => 'nullable|numeric',
+            'expert_advice' => 'nullable|string',
+            'deposit_bonus' => 'nullable|numeric',
         ]);
 
         $input = $request->all();

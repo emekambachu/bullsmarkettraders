@@ -380,6 +380,10 @@ Home
                                     <li style="font-size: 15px;">{{ $package->option3 }}</li>
                                 @endif
 
+                                @if(!empty($package->roi))
+                                    <li style="font-size: 15px;">{{ $package->roi }}</li>
+                                @endif
+
                                 @if(!empty($package->referral_bonus))
                                     <li style="font-size: 15px;">{{ $package->referral_bonus }}% Referral Bonus</li>
                                 @endif

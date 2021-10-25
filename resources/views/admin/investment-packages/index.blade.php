@@ -31,6 +31,7 @@
                                             <th scope="col">Range</th>
                                             <th scope="col">Referral Bonus</th>
                                             <th scope="col">Monthly Profit</th>
+                                            <th scope="col">ROI</th>
                                             <th scope="col">Days Turnover</th>
                                             <th scope="col">Expert Advice</th>
                                             <th scope="col">Deposit Bonus</th>
@@ -44,6 +45,7 @@
                                                 <td>${{ $package->min }} to ${{ $package->max }}</td>
                                                 <td>%{{ $package->referral_bonus }}</td>
                                                 <td>%{{ $package->monthly_profit }}</td>
+                                                <td>%{{ $package->roi }}</td>
                                                 <td>{{ $package->days_turnover }}</td>
                                                 <td>{{ $package->expert_advice }}</td>
                                                 <td>%{{ $package->deposit_bonus }}</td>
@@ -68,6 +70,7 @@
                                             <th scope="col">Range</th>
                                             <th scope="col">Referral Bonus</th>
                                             <th scope="col">Monthly Profit</th>
+                                            <th scope="col">ROI</th>
                                             <th scope="col">Days Turnover</th>
                                             <th scope="col">Expert Advice</th>
                                             <th scope="col">Deposit Bonus</th>

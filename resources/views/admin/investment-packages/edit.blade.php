@@ -24,46 +24,55 @@
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Name</label>
-                                        <input name="name" type="text" class="form-control" id="validationDefault01"
+                                        <input name="name" type="text" class="form-control"
+                                               id="validationDefault01"
                                                value="{{ $package->name }}" required="">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Minimum Amount</label>
-                                        <input name="min" type="number" class="form-control" id="validationDefault01"
+                                        <input name="min" type="number" class="form-control"
+                                               id="validationDefault01"
                                                value="{{ $package->min }}" required="">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Maximum Amount</label>
-                                        <input name="max" type="number" class="form-control" id="validationDefault01"
+                                        <input name="max" type="number" class="form-control"
+                                               id="validationDefault01"
                                                value="{{ $package->max }}" required="">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Referral Bonus</label>
-                                        <input name="referral_bonus" type="number" class="form-control" id="validationDefault01"
-                                               value="{{ $package->referral_bonus }}" required="">
+                                        <input name="referral_bonus" type="number" class="form-control"
+                                               id="validationDefault01" value="{{ $package->referral_bonus }}">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Monthly Profit</label>
-                                        <input name="monthly_profit" type="number" class="form-control" id="validationDefault01"
-                                               value="{{ $package->monthly_profit }}" required="">
+                                        <input name="monthly_profit" type="number" class="form-control"
+                                               id="validationDefault01" value="{{ $package->monthly_profit }}">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="validationDefault01">ROI</label>
+                                        <input name="roi" type="text" class="form-control"
+                                               id="validationDefault01" value="{{ $package->roi }}">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Days Turnover</label>
-                                        <input name="days_turnover" type="number" class="form-control" id="validationDefault01"
-                                               value="{{ $package->days_turnover }}" required="">
+                                        <input name="days_turnover" type="number" class="form-control"
+                                               id="validationDefault01" value="{{ $package->days_turnover }}">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Expert Advice</label>
-                                        <input name="expert_advice" type="text" class="form-control" id="validationDefault01"
-                                               value="{{ $package->expert_advice }}" required="">
+                                        <input name="expert_advice" type="text" class="form-control"
+                                               id="validationDefault01" value="{{ $package->expert_advice }}">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="validationDefault01">Deposit Bonus</label>
-                                        <input name="deposit_bonus" type="number" class="form-control" id="validationDefault01" value="{{ $package->deposit_bonus }}" required="">
+                                        <input name="deposit_bonus" type="number" class="form-control"
+                                               id="validationDefault01" value="{{ $package->deposit_bonus }}">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn brand-color" type="submit">Submit</button>
+                                    <button class="btn brand-color" type="submit">Update</button>
                                 </div>
                             </form>
                         </div>
