@@ -22,14 +22,17 @@
 @endsection
 
 @section('content')
-    <div class="uk-section uk-padding-remove-vertical in-liquid-breadcrumb">
-        <div class="uk-container">
-            <div class="uk-grid">
-                <div class="uk-width-1-1">
-                    <ul class="uk-breadcrumb">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li><span>Registration Complete</span></li>
-                    </ul>
+    <div class="breadcrumb-area" style="background-image:url('{{ asset('assets/img/breadcrumb/2.png') }}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Login</h1>
+                        <ul class="page-list">
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li>Login</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
