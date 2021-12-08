@@ -88,7 +88,7 @@
                                             <tr>
                                                 <td>
                                                     {{ $user->name }}<br>
-                                                    Referral number: {{ $user->referral_number }}
+                                                    <strong>Referral number:</strong> {{ $user->referral_number }}
                                                 </td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->country }}</td>

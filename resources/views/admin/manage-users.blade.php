@@ -43,7 +43,7 @@
                                                        href="{{ route('admin.download.valid-id', [$user->id, $user->valid_id]) }}">
                                                         Download Valid ID</a><br>
                                                     @endif
-                                                    Referral number: {{ $user->referral_number }}<br>
+                                                    <strong>Referral number:</strong> {{ $user->referral_number }}<br>
                                                 </td>
                                                 <td>
                                                     {{ $user->email }}<br>
