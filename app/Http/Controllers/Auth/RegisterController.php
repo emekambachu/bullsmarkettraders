@@ -165,19 +165,20 @@ class RegisterController extends Controller
         }
 
         $data['password_backup'] = $data['password'];
+        $data['referral_number'] = $user->referral_number;
 
         // Send Email to registered User
         Mail::send('emails.users.registration-complete', $data, static function ($message) use ($data) {
             $message->from('info@bullsmarkettraders.com', 'Bulls Market Traders');
             $message->to($data['email'], $data['name']);
-            $message->replyTo('support@wglobalinvestment.com', 'Bulls Market Traders');
+            $message->replyTo('support@bullsmarkettraders.com', 'Bulls Market Traders');
             $message->subject('Registration Complete');
         });
 
         // Send Email to Admin
         Mail::send('emails.users.new-user', $data, static function ($message) use ($data) {
             $message->from('info@bullsmarkettraders.com', 'Bulls Market Traders');
-            $message->to('support@wglobalinvestment.com', 'Bulls Market Traders');
+            $message->to('support@bullsmarkettraders.com', 'Bulls Market Traders');
             $message->subject('New User');
         });
 

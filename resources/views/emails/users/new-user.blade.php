@@ -1,4 +1,4 @@
-<img src="{{ asset('cryptolabsfx_logo.png') }}" width="100">
+<img src="{{ asset('bullsmarket_logo.png') }}" width="100">
 
 <h3>New User</h3>
 
