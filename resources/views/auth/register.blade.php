@@ -59,8 +59,8 @@
                                                name="name" value="{{ old('name') }}" placeholder="Your Name *" required>
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div><!-- /.form-grp -->
                                 </div><!-- /.col-md-6 -->
@@ -94,6 +94,21 @@
                             </div>
 
                             <div class="row" style="margin-bottom: 10px;">
+
+                                <div class="col-md-4">
+                                    <div class="single-input-wrap style-2 input-group">
+                                        <label>Referer (Include your referer address)</label>
+                                        <input class="form-control @error('referer') is-invalid @enderror"
+                                               type="text" name="name" value="{{ old('referer') }}"
+                                               placeholder="Your Referer *">
+                                        @error('referer')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div><!-- /.form-grp -->
+                                </div><!-- /.col-md-6 -->
+
                                 <div class="col-md-6">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Image</label>
@@ -187,7 +202,7 @@
 
                                 <div class="col-md-4">
                                     <div class="single-input-wrap style-2 input-group">
-                                        <label>Country</label>
+                                        <label>State</label>
                                         <input class="form-control @error('state') is-invalid @enderror" type="text"
                                                name="state" value="{{ old('state') }}"
                                                placeholder="Your State *" required>

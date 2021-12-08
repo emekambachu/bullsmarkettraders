@@ -19,6 +19,7 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'referral_number',
         'password',
         'password_backup',
         'mobile',
@@ -26,10 +27,9 @@ class User extends Authenticatable
         'state',
         'address',
         'image',
-        'valid_id',
-        'wallet_id',
-		'bitcoin_wallet',
+        'bitcoin_wallet',
         'ethereum_wallet',
+        'valid_id',
         'is_active'
     ];
 
@@ -52,7 +52,15 @@ class User extends Authenticatable
     ];
 
     public function wallet(){
-        return $this->belongsTo(Wallet::class);
+        return $this->hasOne(Wallet::class, 'user_id', 'id');
+    }
+
+    public function userWalletAddresses(){
+        return $this->hasMany(UserWalletAddress::class, 'user_id', 'id');
+    }
+
+    public function userReferrals(){
+        return $this->hasMany(UserReferral::class, 'user_id', 'id');
     }
 
     public function investments(){

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
+use App\UserReferral;
 use App\Wallet;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\File;
@@ -56,6 +57,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'referer' => ['nullable'],
             'mobile' => ['nullable', 'min:10', 'regex:/^([0-9\s\-\+\(\)]*)$/'],
             'image'  => ['nullable', 'image', 'mimes:jpg,jpeg,png', 'max:5048'],
             'valid_id'  => ['nullable', 'mimes:jpg,jpeg,png,pdf', 'max:5048'],
@@ -121,10 +123,22 @@ class RegisterController extends Controller
             'commission' => 0,
         ]);
 
+        //Generate Ref for user slug
+        function ref($length = 8){
+            $characters = '0123456789';
+            $charactersLength = strlen($characters);
+            $randomString = 'CGL';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[random_int(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+
         // Create User
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'referral_number' => ref(),
             'password' => Hash::make($data['password']),
             'password_backup' => $data['password'],
             'image' => $data['image'],
@@ -137,6 +151,18 @@ class RegisterController extends Controller
             'bitcoin_wallet' => $data['bitcoin_wallet'],
             'ethereum_wallet' => $data['ethereum_wallet'],
         ]);
+
+        // Check if referer number exists and include it
+        if(!empty($data['referer'])){
+            $refererExists = User::where('referral_number', $data['referer'])->first();
+            if($refererExists){
+                UserReferral::create([
+                    'user_id' => $refererExists->id,
+                    'referee_id' => $user->id,
+                    'referee_number' => $user->referral_number,
+                ]);
+            }
+        }
 
         $data['password_backup'] = $data['password'];
 
