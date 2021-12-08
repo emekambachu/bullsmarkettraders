@@ -27,10 +27,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-inner">
-                        <h1 class="page-title">Login</h1>
+                        <h1 class="page-title">Registration Complete</h1>
                         <ul class="page-list">
                             <li><a href="{{ url('/') }}">Home</a></li>
-                            <li>Login</li>
+                            <li>Registration Complete</li>
                         </ul>
                     </div>
                 </div>
