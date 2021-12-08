@@ -64,7 +64,7 @@
                                         </span>
                                         @enderror
                                     </div><!-- /.form-grp -->
-                                </div><!-- /.col-md-6 -->s
+                                </div><!-- /.col-md-6 -->
 
                                 <div class="col-md-4">
                                     <div class="single-input-wrap style-2 input-group">
