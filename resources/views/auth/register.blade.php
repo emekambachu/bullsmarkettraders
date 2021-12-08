@@ -55,21 +55,22 @@
                                 <div class="col-md-4">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Full Name</label>
-                                        <input class="form-control @error('name') is-invalid @enderror" type="text"
-                                               name="name" value="{{ old('name') }}" placeholder="Your Name *" required>
+                                        <input class="form-control @error('name') is-invalid @enderror"
+                                               type="text" name="name" value="{{ old('name') }}"
+                                               placeholder="Your Name *" required>
                                         @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                     </div><!-- /.form-grp -->
-                                </div><!-- /.col-md-6 -->
+                                </div><!-- /.col-md-6 -->s
 
                                 <div class="col-md-4">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Email</label>
-                                        <input class="form-control @error('email') is-invalid @enderror" type="text"
-                                               name="email" value="{{ old('email') }}"
+                                        <input class="form-control @error('email') is-invalid @enderror"
+                                               type="text" name="email" value="{{ old('email') }}"
                                                placeholder="Email Address *" required>
                                         @error('email')
                                         <span class="invalid-feedback" role="alert">
@@ -82,8 +83,9 @@
                                 <div class="col-md-4">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Mobile Number</label>
-                                        <input class="form-control @error('mobile') is-invalid @enderror" type="tel" name="mobile"
-                                               value="{{ old('mobile') }}" placeholder="Mobile Number">
+                                        <input class="form-control @error('mobile') is-invalid @enderror"
+                                               type="tel" name="mobile" value="{{ old('mobile') }}"
+                                               placeholder="Mobile Number">
                                         @error('mobile')
                                         <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -99,7 +101,7 @@
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Referer (Include your referer address)</label>
                                         <input class="form-control @error('referer') is-invalid @enderror"
-                                               type="text" name="name" value="{{ old('referer') }}"
+                                               type="text" name="referer" value="{{ old('referer') }}"
                                                placeholder="Your Referer *">
                                         @error('referer')
                                         <span class="invalid-feedback" role="alert">
