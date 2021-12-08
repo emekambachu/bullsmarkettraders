@@ -41,8 +41,9 @@
                                                     @if(!empty($user->valid_id))
                                                     <a class="btn btn-primary"
                                                        href="{{ route('admin.download.valid-id', [$user->id, $user->valid_id]) }}">
-                                                        Download Valid ID</a>
+                                                        Download Valid ID</a><br>
                                                     @endif
+                                                    Referral number: {{ $user->referral_number }}<br>
                                                 </td>
                                                 <td>
                                                     {{ $user->email }}<br>
