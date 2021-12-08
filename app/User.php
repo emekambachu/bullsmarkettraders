@@ -30,6 +30,7 @@ class User extends Authenticatable
         'bitcoin_wallet',
         'ethereum_wallet',
         'valid_id',
+        'wallet_id',
         'is_active'
     ];
 
