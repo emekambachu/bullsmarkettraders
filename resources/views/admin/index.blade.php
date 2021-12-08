@@ -89,7 +89,7 @@
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->country }}</td>
-                                                <td>${{ $user->wallet->amount }}</td>
+                                                <td>${{ $user->wallet->amount ?? '' }}</td>
                                                 <td>{{ $user->created_at->format('d M Y') }}</td>
                                                 <td>{{ $user->is_active ? 'Active' : 'Blocked' }}</td>
                                             </tr>
