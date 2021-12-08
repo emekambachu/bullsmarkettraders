@@ -86,7 +86,10 @@
                                         <tbody>
                                         @foreach($users as $user)
                                             <tr>
-                                                <td>{{ $user->name }}</td>
+                                                <td>
+                                                    {{ $user->name }}<br>
+                                                    Referral number: {{ $user->referral_number }}
+                                                </td>
                                                 <td>{{ $user->email }}</td>
                                                 <td>{{ $user->country }}</td>
                                                 <td>${{ $user->wallet->amount ?? '' }}</td>
