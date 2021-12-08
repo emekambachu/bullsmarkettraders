@@ -95,7 +95,7 @@
 
                             <div class="row" style="margin-bottom: 10px;">
 
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Referer (Include your referer address)</label>
                                         <input class="form-control @error('referer') is-invalid @enderror"
@@ -109,7 +109,7 @@
                                     </div><!-- /.form-grp -->
                                 </div><!-- /.col-md-6 -->
 
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Image</label>
                                         <input class="form-control @error('image') is-invalid @enderror" type="file" name="image">
@@ -121,7 +121,7 @@
                                     </div><!-- /.form-grp -->
                                 </div><!-- /.col-md-6 -->
 
-                                <div class="col-md-6">
+                                <div class="col-md-3">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Valid Government Issued ID</label>
                                         <input class="form-control @error('valid_id') is-invalid @enderror" type="file" name="valid_id">
