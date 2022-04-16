@@ -58,7 +58,7 @@ Route::post('contact/send', 'HomeController@contactForm');
 
 Route::get('github/deploy/{password}', 'GithubDeploymentController@run');
 
-Auth::routes(['register' => false]);
+Auth::routes();
 
 // Password Recovery
 Route::get('forgot-password', 'HomeController@forgotPassword');

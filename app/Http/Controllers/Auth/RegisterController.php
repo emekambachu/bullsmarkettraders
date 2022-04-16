@@ -51,7 +51,7 @@ class RegisterController extends Controller
      * @return \Illuminate\View\View
      */
     public function showRegistrationForm(){
-        return view('auth.register');
+        return view('home');
     }
 
     /**
