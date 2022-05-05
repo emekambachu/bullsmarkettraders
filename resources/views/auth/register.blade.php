@@ -5,15 +5,6 @@
 @endsection
 
 @section('top-assets')
-{{--    <!-- Latest compiled and minified CSS -->--}}
-{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
-
-{{--    <!-- Optional theme -->--}}
-{{--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">--}}
-
-{{--    <!-- Latest compiled and minified JavaScript -->--}}
-{{--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>--}}
-
     <script src="{{ asset('js/countries.js') }}" type="text/javascript"></script>
 @endsection
 
@@ -114,7 +105,8 @@
                                 <div class="col-md-3">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Image</label>
-                                        <input class="form-control @error('image') is-invalid @enderror" type="file" name="image">
+                                        <input class="form-control @error('image') is-invalid @enderror"
+                                               type="file" name="image">
                                         @error('image')
                                         <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -126,7 +118,8 @@
                                 <div class="col-md-3">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Valid Government Issued ID</label>
-                                        <input class="form-control @error('valid_id') is-invalid @enderror" type="file" name="valid_id">
+                                        <input class="form-control @error('valid_id') is-invalid @enderror"
+                                               type="file" name="valid_id">
                                         @error('valid_id')
                                         <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -141,11 +134,13 @@
                                 <div class="col-md-6">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Password</label>
-                                        <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+                                        <input class="form-control @error('password') is-invalid @enderror"
+                                               type="password" name="password" placeholder="Password"
+                                               autocomplete="new-password" required>
                                         @error('password')
                                         <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div><!-- /.form-grp -->
                                 </div><!-- /.col-md-6 -->
@@ -163,7 +158,8 @@
                                 <div class="col-md-6">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Bitcoin Wallet Address (Optional)</label>
-                                        <input class="form-control @error('bitcoin_wallet') is-invalid @enderror" type="text"
+                                        <input class="form-control @error('bitcoin_wallet') is-invalid @enderror"
+                                               type="text"
                                                name="bitcoin_wallet" value="{{ old('bitcoin_wallet') }}">
                                         @error('bitcoin_wallet')
                                         <span class="invalid-feedback" role="alert">
@@ -176,7 +172,8 @@
                                 <div class="col-md-6">
                                     <div class="single-input-wrap style-2 input-group">
                                         <label>Ethereum Wallet Address (Optional)</label>
-                                        <input class="form-control @error('ethereum_wallet') is-invalid @enderror" type="text"
+                                        <input class="form-control @error('ethereum_wallet') is-invalid @enderror"
+                                               type="text"
                                                name="ethereum_wallet" value="{{ old('ethereum_wallet') }}">
                                         @error('ethereum_wallet')
                                         <span class="invalid-feedback" role="alert">
@@ -234,7 +231,19 @@
                                     </div><!-- /.form-grp -->
                                 </div><!-- /.col-md-12 -->
 
-                                <div class="col-md-12">
+                                <div class="col-md-4">
+                                    <div class="">
+                                        <label>Captcha</label>
+                                        {!! NoCaptcha::renderJs() !!}
+                                        {!! NoCaptcha::display() !!}
+                                        @if ($errors->has('g-recaptcha-response'))
+                                        <span class="text-danger">
+                                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                        @endif
+                                </div><!-- /.col-md-12 -->
+
+                                <div class="col-md-12 mt-2">
                                     <div class="submit-area text-center">
                                         <button type="submit" class="btn btn-pink">
                                             SUBMIT <i class="la la-arrow-right"></i></button>
